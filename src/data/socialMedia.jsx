@@ -1,0 +1,23 @@
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
+const socialMedia = {
+  main: [
+    {
+      name: "facebook",
+      icon: FaFacebookF,
+      link: "https://www.facebook.com/profile.php?id=61575299308376",
+    },
+    {
+      name: "instagram",
+      icon: FaInstagram,
+      link: "https://www.instagram.com/noorvahnepal/",
+    },
+    {
+      name: "linkedin",
+      icon: FaLinkedinIn,
+      link: "https://www.linkedin.com/in/noorvah/",
+    },
+  ],
+};
+
+export default socialMedia;
