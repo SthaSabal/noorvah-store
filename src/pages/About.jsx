@@ -27,7 +27,7 @@ export default function AboutUs() {
 
       {/* Introduction */}
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-2xl sm:text-3xl font-medium mb-6">Our Story</h2>
+        <h2 className="text-2xl sm:text-3xl font-medium mb-6">Our New Story</h2>
         <p className="text-base leading-relaxed max-w-2xl mx-auto">
           Noorvah was born out of a love for calmness, simplicity, and warmth. Our hand-poured candles
           are made with care and intention — to bring comfort into your space. Every scent is
