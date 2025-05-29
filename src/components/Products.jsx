@@ -6,11 +6,8 @@ export default function Products() {
     <section className="w-full max-w-[963px] mx-auto px-4 mt-24">
       {/* Title */}
       <div className="text-center mb-10">
-        <p className="text-[15px] tracking-[4.35px] font-normal text-black uppercase">
-          The Essence of Light
-        </p>
         <h2 className="text-2xl tracking-[3px] font-medium text-black mt-2">
-          Picks For This Season
+          Our Products
         </h2>
       </div>
 

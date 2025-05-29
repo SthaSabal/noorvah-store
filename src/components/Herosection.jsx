@@ -1,6 +1,7 @@
 import React from "react";
 import heroBg from "../assets/Rectangle 2.png";
 import { candles as allCandles } from "../data/Allproducts";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   const featuredCandles = allCandles.filter((candle) => candle.is_featured);
@@ -29,8 +30,18 @@ export default function Menu() {
             And Celebrate The <br />
             Warmth Of Life
           </h1>
+
+          {/* Shop Now Button */}
+          <div className="mt-6 animate-fade-in-up">
+            <Link to="/Product">
+              <button className="px-6 py-2 rounded-md text-white text-sm font-medium tracking-wide bg-gradient-to-r from-[#f26521] to-[#f78f1d] transition-all duration-300 hover:shadow-lg hover:scale-105 hover:from-[#e55a1e] hover:to-[#e6831a]">
+                Shop Now
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
+
 
       {/* --- Picks For This Season Section --- */}
       <section className="w-full max-w-[963px] mx-auto px-4 mt-24">
@@ -204,6 +215,13 @@ export default function Menu() {
           animation: cardAnimation3 0.8s ease-out 1s forwards;
         }
       `}</style>
+      <div className="text-center mt-10">
+          <Link to="/Product">
+              <button className="px-6 py-2 rounded-md text-white text-sm font-medium tracking-wide bg-gradient-to-r from-[#f26521] to-[#f78f1d] transition-all duration-300 hover:shadow-lg hover:scale-105 hover:from-[#e55a1e] hover:to-[#e6831a]">
+                View All Products
+              </button>
+            </Link>
+      </div>
     </div>
   );
 }

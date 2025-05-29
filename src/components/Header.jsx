@@ -10,7 +10,7 @@ export const Header = () => {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <img
-          src="/src/assets/noovah-logo.png"
+          src="noovah-logo.png"
           alt="Noovah Logo"
           className="w-16 h-16 object-cover"
         />

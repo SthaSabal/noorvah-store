@@ -33,22 +33,38 @@ export const Footer = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex flex-col items-start gap-3 md:pt-20 md:items-start w-full md:w-auto">
+
+        <div className="flex flex-col items-start gap-3 md:pt-10 md:items-start w-full md:w-auto">
           <h3 className="text-base font-semibold text-black tracking-wide">Social</h3>
-          <div className="flex flex-col sm:flex-row gap-3 text-sm text-black w-full sm:w-auto justify-start sm:justify-start">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <img src={facebookIcon} alt="Facebook Icon" className="w-5 h-5" />
-              <span>Facebook</span>
-            </div>
-            <div className="flex items-center gap-2 cursor-pointer">
-              <img src={instagramIcon} alt="Instagram Icon" className="w-5 h-5" />
-              <span>Instagram</span>
-            </div>
-            <div className="flex items-center gap-2 cursor-pointer">
-              <img src={linkedinIcon} alt="LinkedIn Icon" className="w-5 h-5" />
-              <span>Linked In</span>
-            </div>
-          </div>
+          <a
+            href="https://www.facebook.com/profile.php?id=61575299308376"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 cursor-pointer hover:text-orange-600 transition"
+          >
+            <img src={facebookIcon} alt="Facebook Icon" className="w-5 h-5" />
+            <span>Facebook</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/noorvahnepal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 cursor-pointer hover:text-orange-600 transition"
+          >
+            <img src={instagramIcon} alt="Instagram Icon" className="w-5 h-5" />
+            <span>Instagram</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/noorvah/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 cursor-pointer hover:text-orange-600 transition"
+          >
+            <img src={linkedinIcon} alt="LinkedIn Icon" className="w-5 h-5" />
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
 
