@@ -7,7 +7,7 @@ import Products from '../components/Products'
 
 export const Product = () => {
     return (
-        <div>
+        <div className="mt-24">
             <Header />
             <Products />
             <Footer />

@@ -9,10 +9,10 @@ export default function Menu() {
   return (
     <div>
       {/* --- Hero Section --- */}
-      <section className="relative w-full h-[526px] overflow-hidden">
+      <section className="relative w-full h-[526px] overflow-hidden mt-24">
         {/* Background Image */}
         <img
-          src={heroBg}
+          src={heroBg} 
           alt="Hero Background"
           className="w-full h-full object-cover absolute top-0 left-0 -z-10 animate-zoom-in"
         />
@@ -216,7 +216,7 @@ export default function Menu() {
         }
       `}</style>
       <div className="text-center mt-10">
-          <Link to="/Product">
+          <Link to="/product">
               <button className="px-6 py-2 rounded-md text-white text-sm font-medium tracking-wide bg-gradient-to-r from-[#f26521] to-[#f78f1d] transition-all duration-300 hover:shadow-lg hover:scale-105 hover:from-[#e55a1e] hover:to-[#e6831a]">
                 View All Products
               </button>

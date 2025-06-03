@@ -14,35 +14,35 @@ export default function Handmade() {
           {/* Mobile Stack Layout */}
           <div className="space-y-6">
             {/* Left image */}
-            <div className="w-full h-[300px] bg-cover bg-center animate-fade-in-left"
+            <div className="w-full h-[300px] bg-cover bg-center rounded-lg animate-fade-in-left"
                  style={{ backgroundImage: `url(${image})` }} />
             
             {/* Logo and title */}
             <div className="text-center animate-fade-in-up">
               <img
-                className="w-32 h-32 mx-auto object-cover mb-4 transition-transform duration-500 hover:rotate-6"
+                className="w-32 h-32 mx-auto object-cover mb-4 transition-transform duration-500 hover:rotate-6 animate-float"
                 alt="Noovah Logo"
                 src={noovahLogo3}
               />
-              <div className="text-2xl text-center tracking-[2.52px] font-medium text-black animate-slide-up-delay-1">
+              <div className="text-2xl text-center tracking-[2.52px] font-medium text-black font-[Montserrat] animate-slide-up-delay-1">
                 Hand Made In Nepal
               </div>
             </div>
 
             {/* Product image */}
             <img
-              className="w-full h-[250px] object-cover animate-fade-in-right"
+              className="w-full h-[250px] object-cover rounded-lg animate-fade-in-right"
               alt="Handmade Product"
               src={coffeeLight1}
             />
 
             {/* Testimonial box */}
-            <div className="w-full bg-[#f1f0ec] p-6 animate-fade-in-up">
+            <div className="w-full bg-[#f1f0ec] p-6 rounded-lg animate-fade-in-up">
               <div className="text-center">
                 <div className="rotate-[-180deg] text-[48px] text-center font-normal text-black leading-none mb-2">
                   ,,
                 </div>
-                <p className="text-sm text-center font-normal text-black leading-[21px] mb-5 animate-slide-up-delay-3">
+                <p className="text-sm text-center font-normal text-black leading-[21px] font-[Montserrat] mb-4 animate-slide-up-delay-3">
                   "I love this candle so much! I always buy one at the
                   beginning of the holiday season. The scent reminds me of
                   when I was a little girl in the village on a special day
@@ -61,12 +61,12 @@ export default function Handmade() {
           <div className="grid grid-cols-2 gap-6">
             {/* Left column */}
             <div className="space-y-6">
-              <div className="w-full h-[400px] bg-cover bg-center animate-fade-in-left"
+              <div className="w-full h-[400px] bg-cover bg-center rounded-lg animate-fade-in-left"
                    style={{ backgroundImage: `url(${image})` }} />
               
               <div className="text-center animate-fade-in-up">
                 <img
-                  className="w-36 h-36 mx-auto object-cover mb-4 transition-transform duration-500 hover:rotate-6"
+                  className="w-36 h-36 mx-auto object-cover mb-4 transition-transform duration-500 hover:rotate-6 animate-float"
                   alt="Noovah Logo"
                   src={noovahLogo3}
                 />
@@ -79,12 +79,12 @@ export default function Handmade() {
             {/* Right column */}
             <div className="space-y-6">
               <img
-                className="w-full h-[300px] object-cover animate-fade-in-right"
+                className="w-full h-[300px] object-cover rounded-lg animate-fade-in-right"
                 alt="Handmade Product"
                 src={coffeeLight1}
               />
 
-              <div className="w-full bg-[#f1f0ec] p-6 animate-fade-in-up">
+              <div className="w-full bg-[#f1f0ec] p-6 rounded-lg animate-fade-in-up">
                 <div className="text-center">
                   <div className="rotate-[-180deg] text-[56px] text-center font-normal text-black leading-none mb-2">
                     ,,
@@ -122,7 +122,7 @@ export default function Handmade() {
                       Hand Made In Nepal
                     </div>
                     <img
-                      className="absolute w-[184px] h-[184px] top-0 left-[51px] object-cover mb-4 transition-transform duration-500 hover:rotate-6"
+                      className="absolute w-[184px] h-[184px] top-0 left-[51px] object-cover mb-4 transition-transform duration-500 hover:rotate-6 animate-float"
                       alt="Noovah Logo"
                       src={noovahLogo3}
                     />

@@ -2,14 +2,14 @@ import React from "react";
 import heroImage from "../assets/about-hero.jpg";
 import studioImage from "../assets/studio.jpg";
 import missionImage from "../assets/mission.jpeg";
-import signature from "../assets/signature.jpeg";
+// import signature from "../assets/signature.jpeg";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 export default function AboutUs() {
   return (
     
-    <div className="w-full bg-[#f1f0ec] text-black">
+    <div className="w-full bg-[#f1f0ec] text-black mt-24">
       <Header/>
       {/* Hero Section */}
       <section className="w-full relative">
@@ -65,10 +65,10 @@ export default function AboutUs() {
           alt="Mission"
           className="w-full h-80 object-cover rounded-xl shadow"
         />
-      </section>
+      </section> 
 
       {/* Closing Section */}
-      <section className="max-w-5xl mx-auto px-6 py-20 text-center">
+      {/* <section className="max-w-5xl mx-auto px-6 py-20 text-center">
         <h3 className="text-xl font-semibold mb-4">Thank You for Supporting Us</h3>
         <p className="text-base max-w-2xl mx-auto">
           We’re so grateful to share our passion with you. Every Noorvah candle is a small part of our
@@ -94,7 +94,7 @@ export default function AboutUs() {
                 <span className="font-bold">*Coffee with Ice*</span>: Imagine the crisp, refreshing taste of iced coffee on a hot day. This fragrance combines the rich, bold aroma of freshly brewed coffee with a cool, iced twist—creating a sensory delight that\'s both invigorating and relaxing.
             </p>
        </div>
-      </section>
+      </section> */}
       <Footer/> 
     </div>
   );

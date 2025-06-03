@@ -3,7 +3,7 @@ import { candles } from "../data/Allproducts";
 
 export default function Products() {
   return (
-    <section className="w-full max-w-[963px] mx-auto px-4 mt-24">
+    <section className="w-full max-w-[963px] mx-auto px-4 pt-24">
       {/* Title */}
       <div className="text-center mb-10">
         <h2 className="text-2xl tracking-[3px] font-medium text-black mt-2">
