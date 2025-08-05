@@ -1,102 +1,234 @@
 import React from "react";
-import heroImage from "../assets/about-hero.jpg";
-import studioImage from "../assets/studio.jpg";
-import missionImage from "../assets/mission.jpeg";
-// import signature from "../assets/signature.jpeg";
+
+import img1 from "../assets/20250604_152151 1.png";
+import img2 from "../assets/20250604_162115 1.png";
+import img3 from "../assets/20250605_145800 1.png";
+import img4 from "../assets/20250605_151938 1.png";
+import bgImage from "../assets/CandleBackground.jpg";
+import storyImg from "../assets/58f817126c591bf76024c3f2d9fda821ccfec1e8.jpg";
+import passionImg from "../assets/20250604_161647 1.png";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 export default function AboutUs() {
   return (
-    
-    <div className="w-full bg-[#f1f0ec] text-black mt-24">
-      <Header/>
-      {/* Hero Section */}
-      <section className="w-full relative">
-        <img
-          src={heroImage}
-          alt="Candle Hero"
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide">
-            About Noorvah
-          </h1>
-        </div>
-      </section>
+    <section className="relative w-full max-w-[1440px] h-auto mx-auto overflow-hidden">
+      <Header />
+      
+      {/* CSS Hover Effects & Responsive Styles */}
+      <style jsx>{`
+        .image-hover {
+          transition: transform 0.3s ease-out, filter 0.3s ease-out;
+        }
+        
+        .image-hover:hover {
+          transform: scale(1.03);
+          filter: brightness(1.05);
+        }
+        
+        .text-hover {
+          transition: color 0.3s ease-out;
+        }
+        
+        .text-hover:hover {
+          color: #8B5A3C;
+        }
+        
+        .section-hover {
+          transition: transform 0.3s ease-out;
+        }
+        
+        .section-hover:hover {
+          transform: translateY(-2px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+          .desktop-layout {
+            display: none;
+          }
+        }
+        
+        @media (min-width: 1201px) {
+          .responsive-layout {
+            display: none;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .hero-text {
+            padding: 0 1rem;
+          }
+          
+          .mobile-spacing {
+            margin-top: 2rem;
+          }
+        }
+      `}</style>
 
-      {/* Introduction */}
-      <section className="max-w-5xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-2xl sm:text-3xl font-medium mb-6">Our New Story</h2>
-        <p className="text-base leading-relaxed max-w-2xl mx-auto">
-          As our name suggests, NOORVAH (derived from ‘Noor,’ meaning light) represents the soul of light itself. We believe that light is more than just illumination—it's an experience, a mood, and a way of life. With every candle we craft, we capture the essence of luxury, elegance, and serenity. Our scented soy candles are more than just products; they are a journey into a world of refined scents and glowing ambiance, designed to elevate your space and enrich your moments.
-        </p>
-      </section>
-
-      {/* Studio Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <img
-          src={studioImage}
-          alt="Studio"
-          className="w-full h-80 object-cover rounded-xl shadow"
-        />
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Crafted with Passion</h3>
-          <p className="text-base leading-relaxed">
-            Every candle is made in our cozy studio using eco-friendly wax, lead-free wicks, and
-            high-quality fragrances. We take pride in small-batch production, ensuring each candle
-            gets the attention it deserves.
+      {/* --- Background Section with Text --- */}
+      <div
+        className="w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <div className="text-center max-w-md mx-4 hero-text">
+          <h2 className="text-3xl md:text-4xl font-medium tracking-[2.5px] text-black mb-4 text-hover">
+            About Us
+          </h2>
+          <p className="text-sm md:text-base text-black leading-relaxed">
+            Have Questions, Ideas, Or Just Want To Say Hello? We'd Love To Hear From You.
           </p>
         </div>
-      </section>
+      </div>
 
-      {/* Mission Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
-          <p className="text-base leading-relaxed">
-            We believe in mindful living. Our mission is to create simple, sustainable candles that
-            spark moments of peace and beauty. Whether it’s self-care, celebration, or reflection —
-            Noorvah is here to light the way.
+      {/* --- Image Layout --- */}
+      {/* Desktop Layout (>1200px) */}
+      <div className="desktop-layout relative w-[1347px] h-[200px] left-1/2 -translate-x-1/2 top-[-160px]">
+        <img src={img1} alt="Visual 1" className="absolute w-[411px] h-[397px] top-0.5 left-0 object-cover image-hover" />
+        <img src={img4} alt="Visual 2" className="absolute w-[411px] h-[400px] top-0 left-[624px] image-hover" />
+        <img src={img2} alt="Visual 3" className="absolute w-[411px] h-[323px] top-[39px] left-[936px] image-hover" />
+        <img src={img3} alt="Visual 4" className="absolute w-[411px] h-[323px] top-[39px] left-[312px] image-hover" />
+      </div>
+
+      {/* Responsive Layout (<1200px) */}
+      <div className="responsive-layout relative w-full max-w-[1000px] mx-auto px-4 -mt-20 md:-mt-32 mb-8">
+        {/* Tablet Layout */}
+        <div className="hidden md:grid grid-cols-2 gap-4">
+          <img src={img1} alt="Visual 1" className="w-full h-64 object-cover rounded-lg image-hover" />
+          <img src={img2} alt="Visual 2" className="w-full h-64 object-cover rounded-lg image-hover" />
+          <img src={img3} alt="Visual 3" className="w-full h-64 object-cover rounded-lg image-hover" />
+          <img src={img4} alt="Visual 4" className="w-full h-64 object-cover rounded-lg image-hover" />
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden grid grid-cols-2 gap-2">
+          <img src={img1} alt="Visual 1" className="w-full h-32 object-cover rounded image-hover" />
+          <img src={img2} alt="Visual 2" className="w-full h-32 object-cover rounded image-hover" />
+          <img src={img3} alt="Visual 3" className="w-full h-32 object-cover rounded image-hover" />
+          <img src={img4} alt="Visual 4" className="w-full h-32 object-cover rounded image-hover" />
+        </div>
+      </div>
+
+      {/* Our Story Section */}
+      {/* Desktop Layout (>1200px) */}
+      <div className="desktop-layout relative w-[1119px] h-[404px] left-1/2 -translate-x-1/2 mt-8 section-hover">
+        <div className="absolute w-[524px] h-60 top-[82px] left-0">
+          <h2 className="absolute w-[322px] top-0 left-0 text-4xl font-medium tracking-[2.52px] text-black text-hover">
+            Our story
+          </h2>
+          <p className="absolute w-[520px] top-[94px] left-0 text-sm text-black leading-[21px] text-justify">
+            As Our Name Suggests, Noorvah (derived From "noor", Meaning Light) Represents The Soul Of Light Itself.
+            We Believe That Light Is More Than Just Illumination—it&apos;s An Experience, A Mood, And A Way Of Life.
+            With Every Candle We Craft, We Capture The Essence Of Luxury, Elegance, And Serenity. Our Scented Soy
+            Candles Are More Than Just Products; They Are A Journey Into A World Of Refined Scents And Glowing Ambiance,
+            Designed To Elevate Your Space And Enrich Your Moments.
           </p>
         </div>
         <img
-          src={missionImage}
-          alt="Mission"
-          className="w-full h-80 object-cover rounded-xl shadow"
+          className="absolute w-[520px] h-[404px] top-0 left-[599px] image-hover"
+          alt="Our Story"
+          src={storyImg}
         />
-      </section> 
+      </div>
 
-      {/* Closing Section */}
-      {/* <section className="max-w-5xl mx-auto px-6 py-20 text-center">
-        <h3 className="text-xl font-semibold mb-4">Thank You for Supporting Us</h3>
-        <p className="text-base max-w-2xl mx-auto">
-          We’re so grateful to share our passion with you. Every Noorvah candle is a small part of our
-          heart, made for your home.
-        </p>
-        <div className="mt-6">
-          <img src={signature} alt="Signature" className="h-16 mx-auto" />
-        </div>
-                <div className="flex flex-col items-center px-4">
-            <h1 className="text-[30pt] font-bold mb-4">*NOORVAH - The Essence of Light*</h1>
-            <p className="text-lg text-center max-w-2xl">As our name suggests, NOORVAH (derived from "Noor", meaning light) represents the soul of light itself. We believe that light is more than just illumination—it&apos;s an experience, a mood, and a way of life. With every candle we craft, we capture the essence of luxury, elegance, and serenity. Our scented soy candles are more than just products; they are a journey into a world of refined scents and glowing ambiance, designed to elevate your space and enrich your moments.</p>
-            
-            <h1 className="text-[30pt] font-bold mb-4">*A Blend of Luxury & Lifestyle*</h1>
-            <p className="text-lg text-center max-w-2xl">NOORVAH is for those who appreciate the finer things in life. Our candles are made from the finest soy wax, infused with carefully curated fragrances that transport you into a world of calm, inspiration, and pure luxury. Each scent is an embodiment of the essence that defines NOORVAH—an aromatic lifestyle, aesthetic, and the perfect balance of style and indulgence.</p>
-
-            
-            <p className="text-lg text-center max-w-2xl">Welcome to NOORVAH, where every light is a luxury, and every scent tells a story.</p>
-            
-            <h1 className="text-[30pt] font-bold mb-4">*Introducing Our New Luxury Candle Collection*</h1>
-            <p className="text-lg text-center max-w-2xl">This spring and summer, NOORVAH is proud to unveil two exclusive candle flavors that perfectly capture the essence of the season. Designed with luxurious gel wax, our candles offer a visually stunning, sensory-rich experience.</p>
-            <p className="text-lg text-center max-w-2xl">
-                <span className="font-bold">*Mixed Fruit*</span>: A vibrant, refreshing blend of citrus and tropical fruits that awakens your senses and fills your space with a lively, joyful ambiance. It\'s the essence of summer, bottled into a candle.
-                <span className="font-bold">*Coffee with Ice*</span>: Imagine the crisp, refreshing taste of iced coffee on a hot day. This fragrance combines the rich, bold aroma of freshly brewed coffee with a cool, iced twist—creating a sensory delight that\'s both invigorating and relaxing.
+      {/* Responsive Layout (<1200px) */}
+      <div className="responsive-layout relative w-full max-w-[1000px] mx-auto px-4 mt-8 md:mt-16 section-hover">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-medium tracking-[2.52px] text-black mb-6 text-hover">
+              Our story
+            </h2>
+            <p className="text-sm md:text-base text-black leading-[21px] md:leading-[24px] text-justify">
+              As Our Name Suggests, Noorvah (derived From "noor", Meaning Light) Represents The Soul Of Light Itself.
+              We Believe That Light Is More Than Just Illumination—it's An Experience, A Mood, And A Way Of Life.
+              With Every Candle We Craft, We Capture The Essence Of Luxury, Elegance, And Serenity. Our Scented Soy
+              Candles Are More Than Just Products; They Are A Journey Into A World Of Refined Scents And Glowing Ambiance,
+              Designed To Elevate Your Space And Enrich Your Moments.
             </p>
-       </div>
-      </section> */}
-      <Footer/> 
-    </div>
+          </div>
+          <div className="flex-1">
+            <img
+              className="w-full h-64 md:h-80 object-cover rounded-lg image-hover"
+              alt="Our Story"
+              src={storyImg}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Crafted with Passion Section */}
+      {/* Desktop Layout (>1200px) */}
+      <div className="desktop-layout relative w-[1120px] h-[444px] left-1/2 -translate-x-1/2 mt-30 section-hover">
+        <img
+          className="absolute w-[520px] h-[444px] top-0 left-0 image-hover"
+          alt="Crafted with Passion"
+          src={passionImg}
+        />
+        <div className="absolute w-[520px] h-[368px] top-10 left-[600px]">
+          <div className="mb-8">
+            <h3 className="text-4xl font-medium text-black tracking-[2.52px] mb-4 text-hover">
+              Crafted with passion
+            </h3>
+            <p className="text-sm text-black text-justify leading-[21px] mt-10">
+              Every Candle Is Made In Our Cozy Studio Using Eco-friendly Wax,
+              Lead-free Wicks, And High-quality Fragrances. We Take Pride In
+              Small-batch Production, Ensuring Each Candle Gets The Attention It
+              Deserves.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-4xl font-medium text-black tracking-[2.52px] mb-4 mt-10 text-hover">
+              Our mission
+            </h3>
+            <p className="text-sm text-black text-justify leading-[21px] mt-10">
+              We Believe In Mindful Living. Our Mission Is To Create Simple,
+              Sustainable Candles That Spark Moments Of Peace And Beauty.
+              Whether It's Self-care, Celebration, Or Reflection — Noorvah Is
+              Here To Light The Way.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Responsive Layout (<1200px) */}
+      <div className="responsive-layout relative w-full max-w-[1000px] mx-auto px-4 mt-16 md:mt-24 mb-16 section-hover">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex-1 order-2 lg:order-1">
+            <img
+              className="w-full h-64 md:h-80 object-cover rounded-lg image-hover"
+              alt="Crafted with Passion"
+              src={passionImg}
+            />
+          </div>
+          <div className="flex-1 order-1 lg:order-2">
+            <div className="mb-8 md:mb-12">
+              <h3 className="text-3xl md:text-4xl font-medium text-black tracking-[2.52px] mb-4 text-hover">
+                Crafted with passion
+              </h3>
+              <p className="text-sm md:text-base text-black text-justify leading-[21px] md:leading-[24px] mt-6">
+                Every Candle Is Made In Our Cozy Studio Using Eco-friendly Wax,
+                Lead-free Wicks, And High-quality Fragrances. We Take Pride In
+                Small-batch Production, Ensuring Each Candle Gets The Attention It
+                Deserves.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl md:text-4xl font-medium text-black tracking-[2.52px] mb-4 text-hover">
+                Our mission
+              </h3>
+              <p className="text-sm md:text-base text-black text-justify leading-[21px] md:leading-[24px] mt-6">
+                We Believe In Mindful Living. Our Mission Is To Create Simple,
+                Sustainable Candles That Spark Moments Of Peace And Beauty.
+                Whether It's Self-care, Celebration, Or Reflection — Noorvah Is
+                Here To Light The Way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </section>
   );
 }
-
