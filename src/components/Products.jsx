@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for internal navigation
 import { candles } from "../data/Allproducts";
 
 export default function Products() {
@@ -14,26 +15,27 @@ export default function Products() {
       {/* Candle Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {candles.map((candle) => (
-          <div
+          <Link
+            to={`/ProductDetail/${candle.id}`} // Link to product detail page
             key={candle.id}
-            className="w-full h-[333px] relative group"
+            className="w-full h-[333px] relative group cursor-pointer"
           >
+
             <img
               src={candle.image}
               alt={candle.name}
               className="w-full h-[285px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
+            
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center transition-transform duration-300 group-hover:-translate-y-1">
               <p className="text-sm font-medium text-black">{candle.name}</p>
-              <p className="text-xs font-normal text-black mt-1">{candle.subtitle}</p>
+              <p className="text-xs font-normal text-black mt-1">
+                {candle.subtitle}
+              </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
   );
 }
-
-// 10:00-10:40
-// 10:40-11:20
-// 11:30-12:10

@@ -12,7 +12,7 @@ import { Footer } from "../components/Footer";
 
 export default function AboutUs() {
   return (
-    <section className="relative w-full max-w-[1440px] h-auto mx-auto overflow-hidden">
+    <section className="relative w-full max-w-auto h-auto mx-auto overflow-hidden">
       <Header />
       
       {/* CSS Hover Effects & Responsive Styles */}
@@ -66,7 +66,6 @@ export default function AboutUs() {
         }
       `}</style>
 
-      {/* --- Background Section with Text --- */}
       <div
         className="w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${bgImage})` }}
@@ -111,7 +110,7 @@ export default function AboutUs() {
 
       {/* Our Story Section */}
       {/* Desktop Layout (>1200px) */}
-      <div className="desktop-layout relative w-[1119px] h-[404px] left-1/2 -translate-x-1/2 mt-8 section-hover">
+      <div className="desktop-layout relative w-[1119px] h-[404px] left-1/2 -translate-x-1/2 mt-8 section-hover mt-24">
         <div className="absolute w-[524px] h-60 top-[82px] left-0">
           <h2 className="absolute w-[322px] top-0 left-0 text-4xl font-medium tracking-[2.52px] text-black text-hover">
             Our story
@@ -132,7 +131,7 @@ export default function AboutUs() {
       </div>
 
       {/* Responsive Layout (<1200px) */}
-      <div className="responsive-layout relative w-full max-w-[1000px] mx-auto px-4 mt-8 md:mt-16 section-hover">
+      <div className="responsive-layout relative w-full max-w-[1000px] mx-auto px-4 mt-8 md:mt-16 section-hover mt-24">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-medium tracking-[2.52px] text-black mb-6 text-hover">
@@ -158,7 +157,7 @@ export default function AboutUs() {
 
       {/* Crafted with Passion Section */}
       {/* Desktop Layout (>1200px) */}
-      <div className="desktop-layout relative w-[1120px] h-[444px] left-1/2 -translate-x-1/2 mt-30 section-hover">
+      <div className="desktop-layout relative w-[1120px] h-[444px] left-1/2 -translate-x-1/2 mt-30 section-hover mt-24">
         <img
           className="absolute w-[520px] h-[444px] top-0 left-0 image-hover"
           alt="Crafted with Passion"
@@ -228,7 +227,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </section>
   );
 }
